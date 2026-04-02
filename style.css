@@ -1,0 +1,121 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container (Glass Effect) */
+.container {
+    width: 85%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.3),
+        inset 0 1px 1px rgba(255,255,255,0.2);
+    transition: 0.4s;
+}
+
+/* Hover 3D effect */
+.container:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.4),
+        inset 0 1px 1px rgba(255,255,255,0.3);
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* Section Title */
+h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffd86b;
+}
+
+/* Text */
+p {
+    margin-top: 10px;
+    line-height: 1.7;
+    color: #f1f1f1;
+}
+
+/* List */
+ul, ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Card effect per section */
+h2, p, ul, ol {
+    background: rgba(255,255,255,0.08);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+/* Hover tiap bagian */
+h2:hover, p:hover, ul:hover, ol:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.01);
+}
+
+/* Identitas highlight */
+.container p:last-child,
+.container p:nth-last-child(2) {
+    font-weight: bold;
+    color: #ffd86b;
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* RESPONSIVE (kecil banget) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+}
